@@ -3,28 +3,28 @@
   "version": "1.0.0",
   "description": "`node`: 18.12.0",
   "main": "index.js",
-	"scripts": {
-		"dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.js",
-		"start": "cross-env vite",
-		"build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-		"lint": "cross-env eslint src --ext .js,.jsx,.ts,.tsx --cache --fix",
-		"stylelint": "stylelint src *.less,*.css --fix",
-		"commit": "cz",
-		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
-	},
-	"lint-staged": {
-		"src/**/*.{ts,tsx,js,jsx}": [
-			"prettier --write",
-			"yarn lint",
-			"git add ."
-		]
-	},
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.js",
+    "start": "cross-env vite",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "lint": "cross-env eslint src --ext .js,.jsx,.ts,.tsx --cache --fix",
+    "stylelint": "stylelint src *.less,*.css --fix",
+    "commit": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "yarn lint",
+      "git add ."
+    ]
+  },
   "husky": {
-		"hooks": {
-			"pre-commit": "lint-staged",
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-		}
-	},
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -92,6 +92,7 @@
     "axios": "^1.2.1",
     "classnames": "^2.3.2",
     "framer-motion": "^7.6.19",
+    "localforage": "^1.10.0",
     "moment": "^2.29.4",
     "query-string": "^7.1.3",
     "react": "^18.2.0",
