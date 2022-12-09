@@ -34,6 +34,7 @@ specifiers:
   dotenv: ^16.0.3
   eslint: ^8.29.0
   eslint-config-prettier: ^8.5.0
+  eslint-config-problems: ^7.0.1
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-react: ^7.31.11
   eslint-plugin-react-hooks: ^4.6.0
@@ -123,6 +124,7 @@ devDependencies:
   dotenv: 16.0.3
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0_eslint@8.29.0
+  eslint-config-problems: 7.0.1_eslint@8.29.0
   eslint-plugin-prettier: 4.2.1_nrhoyyjffvfyk4vtlt5destxgm
   eslint-plugin-react: 7.31.11_eslint@8.29.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.29.0
@@ -4650,6 +4652,14 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.29.0
+    dev: true
+
+  /eslint-config-problems/7.0.1_eslint@8.29.0:
+    resolution: {integrity: sha512-tUIcEbQxzrRa1UwaymYzEc851/Li9LNUCS+lhQksTI53aS1PJXEMWk28BXpe6Zebtt8jHx4dm3/hgqlDDsbWxg==}
+    peerDependencies:
+      eslint: ^8.24.0
     dependencies:
       eslint: 8.29.0
     dev: true
