@@ -37,11 +37,11 @@ export default defineConfig({
 	server: {
 		port: PORT,
 		strictPort: true,
-		proxy: {
-			[`${API_PREFIX}`]: {
-				target: API_HOST,
-				rewrite: path => path.replace(/^\/api/, '')
-			}
-		}
+		// proxy: {
+		// 	[`${API_PREFIX}`]: {
+		// 		target: API_HOST,
+		// 		rewrite: path => path.replace(/^\/api/, '')
+		// 	}
+		// }
 	}
 })

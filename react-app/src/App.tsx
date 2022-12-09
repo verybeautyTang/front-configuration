@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { HashRouter } from 'react-router-dom'
+// import { HashRouter } from 'react-router-dom'
 
-import Error from './components/ErrorBoundary'
+// import Error from './components/ErrorBoundary'
 // import RouteMap from '@/routes'
 import { clearIndexedDb, initIndexedDb } from './utils/config'
 
