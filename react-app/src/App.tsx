@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
 	}, [])
 
 	return (
-			<div>hello</div>
+			<div>hello my world</div>
 	)
 }
 
