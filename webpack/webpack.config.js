@@ -1,4 +1,6 @@
 const { join } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const config  = {
   entry: './src/index.js',
   output: {
@@ -11,7 +13,19 @@ const config  = {
       use: ['style-loader', 'css-loader','sass-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html'
+    }),
+    new webpack.HotModuleReplacementPlugin() // 热更新
+  ],
+  devServer: {
+    hot: true,
+  },
+  mode: 'development',
+
 }
 
 module.exports = config

@@ -1,2 +1,2 @@
 require('./index.scss')
-console.log('first')
+console.log('my lady')
