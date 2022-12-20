@@ -11,6 +11,14 @@ const config  = {
     rules: [
       {test: /\.scss|.css$/,
       use: ['style-loader', 'css-loader','sass-loader']
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resources',
+      },
+      {
+        test: /\.svg/,
+        type: 'asset/inline'
       }
     ]
   },

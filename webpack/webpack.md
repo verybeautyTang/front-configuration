@@ -20,3 +20,7 @@
 1. 关键字entry、output
 2. node的路径相关： 要使用require进行引用
 3. output里面的path需要使用绝对路径 使用path.join去拼接路径
+
+4. test去匹配文件、loader倒叙加载流水线文件
+5. 安装plugin以来
+6. 热模块更新 需要配合webpack-dev-serve
