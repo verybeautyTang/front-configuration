@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/lib/locale/zh_CN'
-// import store from '@/store'
+import store from '@/store'
 import App from './App'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import './styles/base.less'
@@ -21,9 +21,9 @@ const queryClient = new QueryClient({
 render(
 	<ConfigProvider locale={zhCN}>
 		<QueryClientProvider client={queryClient}>
-			{/* <Provider store={store}> */}
+			<Provider store={store}>
 				<App />
-			{/* </Provider> */}
+			</Provider>
 		</QueryClientProvider>
 	</ConfigProvider>,
 

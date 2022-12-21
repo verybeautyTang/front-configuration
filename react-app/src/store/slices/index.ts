@@ -1,9 +1,9 @@
 import { combineReducers } from '@reduxjs/toolkit'
-// import user from './app'
-// import app from './user'
+import user from './user'
+import app from './app'
 const rootReducer = combineReducers({
-	// user,
-	// app
+	user,
+	app
 })
 
 export default rootReducer
