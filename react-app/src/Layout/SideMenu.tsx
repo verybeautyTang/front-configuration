@@ -69,6 +69,7 @@ const SideMenu = (): JSX.Element => {
 	}
 
 	const renderMenu = (menu: MenuItem[]) => {
+		console.log(menu)
 		return menu.map(m => {
 			const { children = [], title, key } = m
 			if (!children || !children.length) return renderMenuWithoutChildren(m)
@@ -95,8 +96,9 @@ const SideMenu = (): JSX.Element => {
 					style={{ height: '100%' }}
 					defaultOpenKeys={menuKeys.open}
 					defaultSelectedKeys={menuKeys.selected}
+					items={renderMenu(menu)}
 				>
-					{renderMenu(menu)}
+					{/* {renderMenu(menu)} */}
 				</Menu>
 			</Sider>
 

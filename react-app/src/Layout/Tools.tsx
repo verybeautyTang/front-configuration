@@ -29,25 +29,41 @@ const Tools = (): JSX.Element => {
 		}
 	}
 
-	const menu = (
-		<Menu
-			onClick={onMenuClick}
-			items={[
-				{
-					label: '设置',
-					key: 'setting'
-				},
-				{
-					label: '注销',
-					key: 'logout'
-				}
-			]}
-		/>
-	)
+	// const menu = (
+	// 	<Menu
+	// 		onClick={onMenuClick}
+	// 		items={[
+	// 			{
+	// 				label: '设置',
+	// 				key: 'setting'
+	// 			},
+	// 			{
+	// 				label: '注销',
+	// 				key: 'logout'
+	// 			}
+	// 		]}
+	// 	/>
+	// )
+
+	const items: MenuProps['items'] = [
+		{
+							label: '设置',
+							key: 'setting'
+						},
+						{
+							label: '注销',
+							key: 'logout'
+						}
+	]
 
 	return (
 		<div className={styles.tools}>
-			<Dropdown overlay={menu}>
+			<Dropdown menu={{
+				items,
+				selectable: true,
+				defaultSelectedKeys: ['3'],
+			}}
+			>
 				<div className={styles.tools__menu}>
 					<Space>
 						<Logo />

@@ -91,7 +91,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
-    "@fe-cookie/client-request-crypto": "^1.0.1",
     "@reduxjs/toolkit": "^1.9.1",
     "antd": "^5.0.4",
     "axios": "^1.2.1",

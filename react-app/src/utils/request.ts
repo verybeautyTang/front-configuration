@@ -1,6 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
 import { HttpResponse, RequestOptions } from '@/types'
-import { clientCrypto } from '@fe-cookie/client-request-crypto'
 import { message } from 'antd'
 import store from '@/store'
 import { setUser } from '@/store/slices/user'
@@ -19,18 +18,13 @@ const request = <T = any, D = any>(requestionOptions: RequestOptions<T>): Promis
 	const { method, url, data, params, options = defaultOptions } = requestionOptions
 	const { globalLoading, customError } = options
 
-	const { sign, params: newParams } = clientCrypto({
-		params: params || data || {},
-		salt: globalConfig.salt
-	})
-
 	const _options: AxiosRequestConfig = {
 		method,
 		url,
 		data,
 		params,
 		headers: {
-			'X-AUTHO-TOKEN': sign || ''
+			'X-AUTHO-TOKEN': ''
 		}
 	}
 
