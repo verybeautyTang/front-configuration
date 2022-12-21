@@ -24,3 +24,8 @@
 4. test去匹配文件、loader倒叙加载流水线文件
 5. 安装plugin以来
 6. 热模块更新 需要配合webpack-dev-serve
+
+
+8.  开发中使用热更新 开发模式中使用压缩插件
+9. babel配置文件、pollfile
+10. 
